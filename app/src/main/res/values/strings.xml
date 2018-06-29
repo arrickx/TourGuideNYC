@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TourGuideNYC</string>
+    <string name="restaurant">RESTAURANT</string>
+    <string name="museum">MUSEUM</string>
+    <string name="landmark">LANDMARK</string>
+    <string name="event">EVENT</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/landmark"
+        style="@style/FourActivities"
+        android:text="@string/landmark"/>
+
+    <TextView
+        android:id="@+id/museum"
+        style="@style/FourActivities"
+        android:text="@string/museum"/>
+
+    <TextView
+        android:id="@+id/restaurant"
+        style="@style/FourActivities"
+        android:text="@string/restaurant"/>
+
+    <TextView
+        android:id="@+id/event"
+        style="@style/FourActivities"
+        android:text="@string/event"/>
+
+</LinearLayout>
