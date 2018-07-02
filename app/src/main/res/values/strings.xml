@@ -6,4 +6,16 @@
     <string name="event">EVENT</string>
     <string name="test_name">some name</string>
     <string name="test_location">some location</string>
+    <string name="statue_of_liberty">Statue of Liberty</string>
+    <string name="central_park">Central Park</string>
+    <string name="times_square">Times Square</string>
+    <string name="metropolitan_museum_of_art">Metropolitan Museum of Art</string>
+    <string name="museum_of_modern_art">Museum of Modern Art</string>
+    <string name="american_museum_of_natural_history">American Museum of Natural History</string>
+    <string name="the_river_cafe">The River Café</string>
+    <string name="daniel">Daniel</string>
+    <string name="gramercy_tavern">Gramercy Tavern</string>
+    <string name="times_square_ball_drop">Times Square Ball Drop</string>
+    <string name="macys_thanksgiving_parade">Macy\'s Thanksgiving Day Parade</string>
+    <string name="new_york_city_marathon">New York City Marathon</string>
 </resources>

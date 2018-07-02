@@ -40,9 +40,9 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
         attractionNameTextView.setText(currentAttraction.getmAttractionName());
 
-        TextView attractionLocationTextview = listItemView.findViewById(R.id.attraction_location);
+        TextView attractionLocationTextView = listItemView.findViewById(R.id.attraction_location);
 
-        attractionNameTextView.setText(currentAttraction.getmAttractionLocation());
+        attractionLocationTextView.setText(currentAttraction.getmAttractionLocation());
 
         return listItemView;
 

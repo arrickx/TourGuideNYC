@@ -6,6 +6,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+
 public class EventActivity extends AppCompatActivity {
 
     @Override
