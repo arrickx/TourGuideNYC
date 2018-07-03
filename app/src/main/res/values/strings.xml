@@ -9,9 +9,9 @@
     <string name="statue_of_liberty">Statue of Liberty</string>
     <string name="central_park">Central Park</string>
     <string name="times_square">Times Square</string>
-    <string name="metropolitan_museum_of_art">Metropolitan Museum of Art</string>
-    <string name="museum_of_modern_art">Museum of Modern Art</string>
-    <string name="american_museum_of_natural_history">American Museum of Natural History</string>
+    <string name="the_met">Metropolitan Museum of Art</string>
+    <string name="moma">Museum of Modern Art</string>
+    <string name="amnh">American Museum of Natural History</string>
     <string name="the_river_cafe">The River Café</string>
     <string name="daniel">Daniel</string>
     <string name="gramercy_tavern">Gramercy Tavern</string>

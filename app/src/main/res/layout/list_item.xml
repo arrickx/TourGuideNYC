@@ -5,15 +5,22 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/attraction_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/test_name"
-        android:id="@+id/attraction_name"/>
+        android:text="@string/test_name" />
 
     <TextView
+        android:id="@+id/attraction_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/test_location"
-        android:id="@+id/attraction_location"/>
+        android:text="@string/test_location" />
+
+    <ImageView
+        android:id="@+id/attraction_img"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
 
 </LinearLayout>
