@@ -12,11 +12,17 @@ import butterknife.ButterKnife;
 
 public class EventActivity extends AppCompatActivity {
     @BindString(R.string.times_square_ball_drop)
-    String balldrop;
+    String ballDrop;
     @BindString(R.string.macys_thanksgiving_parade)
     String parade;
     @BindString(R.string.new_york_city_marathon)
     String marathon;
+    @BindString(R.string.ball_drop_location)
+    String ballDropLocation;
+    @BindString(R.string.parade_location)
+    String paradeLocation;
+    @BindString(R.string.marathon_location)
+    String marathonLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +33,9 @@ public class EventActivity extends AppCompatActivity {
         // Create a list of landmark attractions
         final ArrayList<Attraction> attractions = new ArrayList<>();
 
-        attractions.add(new Attraction(balldrop, "E test 1"));
-        attractions.add(new Attraction(parade, "E test 2"));
-        attractions.add(new Attraction(marathon, "E test 2"));
+        attractions.add(new Attraction(ballDrop, ballDropLocation));
+        attractions.add(new Attraction(parade, paradeLocation));
+        attractions.add(new Attraction(marathon, marathonLocation));
 
         AttractionAdapter adapter = new AttractionAdapter(this, attractions);
 

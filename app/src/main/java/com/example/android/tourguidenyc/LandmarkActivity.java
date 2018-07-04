@@ -16,6 +16,12 @@ public class LandmarkActivity extends AppCompatActivity {
     String centralPark;
     @BindString(R.string.times_square)
     String timesSquare;
+    @BindString(R.string.statue_location)
+    String statueLocation;
+    @BindString(R.string.park_location)
+    String parkLocation;
+    @BindString(R.string.times_square_location)
+    String timesSquareLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +32,9 @@ public class LandmarkActivity extends AppCompatActivity {
         // Create a list of landmark attractions
         final ArrayList<Attraction> attractions = new ArrayList<>();
 
-        attractions.add(new Attraction(statueOfLiberty, "L test 1"));
-        attractions.add(new Attraction(centralPark, "L test 2"));
-        attractions.add(new Attraction(timesSquare, "L test 2"));
+        attractions.add(new Attraction(statueOfLiberty, statueLocation));
+        attractions.add(new Attraction(centralPark, parkLocation));
+        attractions.add(new Attraction(timesSquare, timesSquareLocation));
 
         AttractionAdapter adapter = new AttractionAdapter(this, attractions);
 

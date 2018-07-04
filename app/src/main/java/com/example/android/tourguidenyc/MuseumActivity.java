@@ -11,11 +11,18 @@ import butterknife.ButterKnife;
 
 public class MuseumActivity extends AppCompatActivity {
     @BindString(R.string.the_met)
-    String the_met;
+    String theMet;
     @BindString(R.string.moma)
     String moma;
     @BindString(R.string.amnh)
     String amnh;
+    @BindString(R.string.met_location)
+    String metLocation;
+    @BindString(R.string.moma_location)
+    String momaLocation;
+    @BindString(R.string.amnh_location)
+    String amnhLocation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +33,9 @@ public class MuseumActivity extends AppCompatActivity {
         // Create a list of landmark attractions
         final ArrayList<Attraction> attractions = new ArrayList<>();
 
-        attractions.add(new Attraction(the_met, "M test 1"));
-        attractions.add(new Attraction(moma, "M test 2"));
-        attractions.add(new Attraction(amnh, "M test 2"));
+        attractions.add(new Attraction(theMet, metLocation));
+        attractions.add(new Attraction(moma, momaLocation));
+        attractions.add(new Attraction(amnh, amnhLocation));
 
         AttractionAdapter adapter = new AttractionAdapter(this, attractions);
 
