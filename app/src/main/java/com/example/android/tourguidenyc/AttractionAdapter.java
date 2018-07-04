@@ -35,20 +35,28 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
                     R.layout.list_item, parent, false);
         }
 
+        // Get the {@link Attraction} object located at this position in the list
         Attraction currentAttraction = getItem(position);
 
+        // Find the TextView in the list_item.xml layout with the ID attraction_name.
         TextView attractionNameTextView = listItemView.findViewById(R.id.attraction_name);
-
+        // Get the attraction name from the currentAttraction object and set this text on
+        // the attraction_name TextView.
         attractionNameTextView.setText(currentAttraction.getmAttractionName());
 
+        // Find the TextView in the list_item.xml layout with the ID attraction_location.
         TextView attractionLocationTextView = listItemView.findViewById(R.id.attraction_location);
-
+        // Get the attraction location from the currentAttraction object and set this text on
+        // the attraction_location TextView.
         attractionLocationTextView.setText(currentAttraction.getmAttractionLocation());
 
+        // Find the ImageView in the list_item.xml layout with the ID image.
         ImageView imageView = listItemView.findViewById(R.id.attraction_img);
-
+        // Display the provided image based on the resource ID
         imageView.setImageResource(currentAttraction.getmImageResourceId());
 
+        // Return the whole list item layout (containing 2 TextViews and 1 ImageView) so that
+        // it can be shown in the ListView.
         return listItemView;
 
     }

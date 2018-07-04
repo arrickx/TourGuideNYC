@@ -36,10 +36,17 @@ public class LandmarkFragment extends Fragment {
         attractions.add(new Attraction(R.string.central_park, R.string.park_location, R.drawable.central_park));
         attractions.add(new Attraction(R.string.times_square, R.string.times_square_location, R.drawable.times_square));
 
+        // Create an {@link AttractionAdapter}, whose data source is a list of {@link attractions}.
+        // The adapter knows how to create list items for each item in the list.
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
 
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // There should be a {@link ListView} with the view ID called list, which is declared in
+        // the attraction_list.xml layout file.
         ListView listView = rootView.findViewById(R.id.list);
 
+        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Attraction} in the list.
         listView.setAdapter(adapter);
 
         return rootView;
