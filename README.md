@@ -1,7 +1,7 @@
 # Tour Guide NYC App
 > This is a Tour Guide App which presents relevant information to a user who’s visiting New York city. The app has a list of top landmarks, museums, restaurants, and events for New York city.
 
-[![Image](demo.gift)](Image)
+[![Image](demo.gif)](Image)
 
 ## Getting Started
 
