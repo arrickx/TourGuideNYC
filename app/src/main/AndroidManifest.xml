@@ -16,22 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LandmarkActivity"
-            android:label="@string/landmark"
-            android:parentActivityName="com.example.android.tourguidenyc.MainActivity" />
-        <activity
-            android:name=".MuseumActivity"
-            android:label="@string/museum"
-            android:parentActivityName="com.example.android.tourguidenyc.MainActivity" />
-        <activity
-            android:name=".RestaurantActivity"
-            android:label="@string/restaurant"
-            android:parentActivityName="com.example.android.tourguidenyc.MainActivity" />
-        <activity
-            android:name=".EventActivity"
-            android:label="@string/event"
-            android:parentActivityName="com.example.android.tourguidenyc.MainActivity" />
     </application>
 
 </manifest>

@@ -1,64 +1,25 @@
 package com.example.android.tourguidenyc;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
-    @BindView(R.id.landmark)
-    TextView landmark;
-    @BindView(R.id.museum)
-    TextView museum;
-    @BindView(R.id.restaurant)
-    TextView restaurant;
-    @BindView(R.id.event)
-    TextView event;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
 
-        landmark.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent landmarkIntent = new Intent(MainActivity.this, LandmarkActivity.class);
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = findViewById(R.id.viewpager);
 
-                startActivity(landmarkIntent);
-            }
-        });
+        // Create an adapter that knows which fragment should be shown on each page
+        CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());
 
-        museum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent museumIntent = new Intent(MainActivity.this, MuseumActivity.class);
-
-                startActivity(museumIntent);
-            }
-        });
-        restaurant.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent restaurantIntent = new Intent(MainActivity.this, RestaurantActivity.class);
-
-                startActivity(restaurantIntent);
-            }
-        });
-        event.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent eventIntent = new Intent(MainActivity.this, EventActivity.class);
-
-                startActivity(eventIntent);
-            }
-        });
-
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
     }
 }

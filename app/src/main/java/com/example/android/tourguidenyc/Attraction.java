@@ -6,11 +6,11 @@ package com.example.android.tourguidenyc;
  */
 public class Attraction {
 
-    //Default name of the attraction
-    private String mAttractionName;
+    //String resource ID for the name of the attraction
+    private int mAttractionName;
 
-    //Default location of the attraction
-    private String mAttractionLocation;
+    //String resource ID for the location of the attraction
+    private int mAttractionLocation;
 
     //Image resource ID for the attraction
     private int mImageResourceId;
@@ -18,28 +18,28 @@ public class Attraction {
     /**
      * Create a new Attraction object.
      *
-     * @param AttractionName is the name of the attraction
-     * @param AttractionLocation is the location of the attraction
+     * @param AttractionName     is the string resource ID for the name of the attraction
+     * @param AttractionLocation is the string resource ID for the location of the attraction
      * @param imageResourceId    is the drawable resource ID for the image associated with the word
      */
-    public Attraction(String AttractionName, String AttractionLocation, int imageResourceId) {
+    public Attraction(int AttractionName, int AttractionLocation, int imageResourceId) {
         mAttractionName = AttractionName;
         mAttractionLocation = AttractionLocation;
         mImageResourceId = imageResourceId;
     }
 
     //Retrieve the name of the attraction.
-    public String getmAttractionName() {
+    public int getmAttractionName() {
         return mAttractionName;
     }
 
     //Retrieve the location of the attraction.
-    public String getmAttractionLocation() {
+    public int getmAttractionLocation() {
         return mAttractionLocation;
     }
 
     //Retrieve the image resource ID of the attraction.
-    public int getmImageResourceId(){
+    public int getmImageResourceId() {
         return mImageResourceId;
     }
 }
