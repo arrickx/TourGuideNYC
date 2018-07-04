@@ -2,16 +2,69 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="FourActivities">
-        <item name="android:layout_height">wrap_content</item>
+    <!-- CategoryTab theme. -->
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:padding">8dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- whole linearLayout theme. -->
+    <style name="WholeLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- ViewPager theme. -->
+    <style name="ViewPager">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- Attraction name theme. -->
+    <style name="Name">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:text">@string/test_name</item>
+    </style>
+
+    <!-- Attraction location theme. -->
+    <style name="Location">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:text">@string/test_location</item>
+    </style>
+
+    <!-- Attraction Image theme. -->
+    <style name="Image">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+        <item name="android:maxHeight">250dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <!-- activity_main theme. -->
+    <style name="ActivityMain">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
     </style>
 
 </resources>
