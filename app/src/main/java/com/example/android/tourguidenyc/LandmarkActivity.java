@@ -1,11 +1,13 @@
 package com.example.android.tourguidenyc;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import butterknife.BindDrawable;
 import butterknife.BindString;
 import butterknife.ButterKnife;
 
@@ -22,6 +24,12 @@ public class LandmarkActivity extends AppCompatActivity {
     String parkLocation;
     @BindString(R.string.times_square_location)
     String timesSquareLocation;
+    @BindDrawable(R.drawable.statue_of_liberty)
+    Drawable statueImg;
+    @BindDrawable(R.drawable.central_park)
+    Drawable parkImg;
+    @BindDrawable(R.drawable.times_square)
+    Drawable timesSquareImg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +40,9 @@ public class LandmarkActivity extends AppCompatActivity {
         // Create a list of landmark attractions
         final ArrayList<Attraction> attractions = new ArrayList<>();
 
-        attractions.add(new Attraction(statueOfLiberty, statueLocation));
-        attractions.add(new Attraction(centralPark, parkLocation));
-        attractions.add(new Attraction(timesSquare, timesSquareLocation));
+        attractions.add(new Attraction(statueOfLiberty, statueLocation, R.drawable.statue_of_liberty));
+        attractions.add(new Attraction(centralPark, parkLocation, R.drawable.central_park));
+        attractions.add(new Attraction(timesSquare, timesSquareLocation, R.drawable.times_square));
 
         AttractionAdapter adapter = new AttractionAdapter(this, attractions);
 
