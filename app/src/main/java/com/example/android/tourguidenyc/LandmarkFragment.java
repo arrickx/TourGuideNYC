@@ -3,6 +3,9 @@ package com.example.android.tourguidenyc;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +16,15 @@ import java.util.ArrayList;
 
 import butterknife.BindDrawable;
 import butterknife.BindString;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
  * {@link Fragment} that displays a list of Landmarks in New York City.
  */
 public class LandmarkFragment extends Fragment {
+
+    @BindView(R.id.list) RecyclerView attractionList;
 
     public LandmarkFragment() {
         // Required empty public constructor
@@ -28,7 +34,7 @@ public class LandmarkFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.attraction_list, container, false);
-
+        ButterKnife.bind(this, rootView);
         // Create a list of landmark attractions
         final ArrayList<Attraction> attractions = new ArrayList<>();
 
@@ -36,18 +42,12 @@ public class LandmarkFragment extends Fragment {
         attractions.add(new Attraction(R.string.central_park, R.string.park_location, R.drawable.central_park));
         attractions.add(new Attraction(R.string.times_square, R.string.times_square_location, R.drawable.times_square));
 
-        // Create an {@link AttractionAdapter}, whose data source is a list of {@link attractions}.
-        // The adapter knows how to create list items for each item in the list.
-        AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions);
+        attractionList.setAdapter(new AttractionAdapter(attractions));
 
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in
-        // the attraction_list.xml layout file.
-        ListView listView = rootView.findViewById(R.id.list);
+        attractionList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Attraction} in the list.
-        listView.setAdapter(adapter);
+        attractionList.addItemDecoration(new
+                DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
 
         return rootView;
     }
