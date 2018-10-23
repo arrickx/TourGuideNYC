@@ -2,7 +2,7 @@ package com.example.android.tourguidenyc;
 
 /**
  * {@link Attraction} represents detail information of the attraction.
- * It contains the name, location, and picture of the attranction.
+ * It contains the name, location, and picture of the attractions.
  */
 public class Attraction {
 
